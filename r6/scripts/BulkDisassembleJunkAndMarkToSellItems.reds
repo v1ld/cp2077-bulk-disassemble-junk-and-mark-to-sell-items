@@ -34,7 +34,7 @@ private final func HaveJunkOrMarkedItemsToDisassemble() -> Bool {
 
 @addMethod(BackpackMainGameController)
 protected cb func OnHandleGlobalInput(e: ref<inkPointerEvent>) -> Bool {
-    if e.IsAction(n"world_map_filter_navigation_up") {
+    if e.IsAction(n"world_map_menu_cycle_filter_prev") {
         this.DisassembleJunkItems();
         this.DisassembleMarkToSellItems();
         this.PlaySound(n"Item", n"OnBuy");
@@ -44,9 +44,9 @@ protected cb func OnHandleGlobalInput(e: ref<inkPointerEvent>) -> Bool {
 @addMethod(BackpackMainGameController)
 private final func SetupDisassembleButtonHints() -> Void {
     if this.HaveJunkOrMarkedItemsToDisassemble() {
-        this.m_buttonHintsController.AddButtonHint(n"world_map_filter_navigation_up", GetLocalizedText("UI-ScriptExports-Disassemble0") + " Trash");
+        this.m_buttonHintsController.AddButtonHint(n"world_map_menu_cycle_filter_prev", GetLocalizedText("UI-ScriptExports-Disassemble0") + " Trash");
     } else {
-        this.m_buttonHintsController.RemoveButtonHint(n"world_map_filter_navigation_up");
+        this.m_buttonHintsController.RemoveButtonHint(n"world_map_menu_cycle_filter_prev");
     }
 }
 
