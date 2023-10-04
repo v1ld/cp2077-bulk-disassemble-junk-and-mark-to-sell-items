@@ -12,7 +12,7 @@ jobs:
     permissions:
       contents: write
     env:
-      ARCHIVE_NAME: DisassembleJunkAndMarkToSellItems-${{ github.ref_name }}.zip
+      ARCHIVE_NAME: BulkDisassembleJunkAndMarkToSellItems-${{ github.ref_name }}.zip
 
     steps:
       - uses: actions/checkout@v3
